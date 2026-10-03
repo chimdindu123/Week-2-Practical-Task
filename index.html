@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2 Practical Task - HTML Forms</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header">
+        <h1>Student Registration</h1>
+        <p>Week 2 Practical Task: HTML Forms — Action &amp; Method</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Part A — Student Registration Form</h2>
+            <p class="intro">Please complete the form below to register.</p>
+
+            <form action="/register" method="post">
+                <div class="form-group">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" id="fullname" name="fullname"
+                           placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email"
+                           placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password"
+                           placeholder="Create a password" required>
+                </div>
+
+                <fieldset class="form-group">
+                    <legend>Gender</legend>
+                    <label class="inline-option">
+                        <input type="radio" name="gender" value="Male" required>
+                        Male
+                    </label>
+                    <label class="inline-option">
+                        <input type="radio" name="gender" value="Female">
+                        Female
+                    </label>
+                </fieldset>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">-- Select your country --</option>
+                        <option value="Nigeria">Nigeria</option>
+                        <option value="Ghana">Ghana</option>
+                        <option value="Kenya">Kenya</option>
+                        <option value="South Africa">South Africa</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="about">About Yourself</label>
+                    <textarea id="about" name="about" rows="5"
+                              placeholder="Tell us a little about yourself"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label class="inline-option terms">
+                        <input type="checkbox" id="terms" name="terms" value="agreed" required>
+                        I agree to the terms and conditions.
+                    </label>
+                </div>
+
+                <button type="submit" class="button">Register</button>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Part C — Bonus Challenge: Search Form</h2>
+            <p class="intro">Enter a word or topic you want to search for.</p>
+
+            <form action="/search" method="get" class="search-form">
+                <label for="search">Search</label>
+                <div class="search-row">
+                    <input type="text" id="search" name="q" placeholder="Search..." required>
+                    <button type="submit" class="button">Search</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="card">
+            <h2>Part D — Explain What You Learned</h2>
+
+            <article class="answer">
+                <h3>1. What does the action attribute do?</h3>
+                <p>The action attribute specifies the URL or location where the form data will be sent after the user submits the form.</p>
+            </article>
+
+            <article class="answer">
+                <h3>2. What does the method attribute do?</h3>
+                <p>The method attribute specifies how the browser sends the form data to the destination. Common methods are GET and POST.</p>
+            </article>
+
+            <article class="answer">
+                <h3>3. Why is GET commonly useful for a search form?</h3>
+                <p>GET is useful for search forms because the search information is added to the URL as a query string. This makes search results easy to bookmark or share.</p>
+            </article>
+
+            <article class="answer">
+                <h3>4. Why might POST be used for a registration form?</h3>
+                <p>POST sends form data in the request body instead of putting it in the URL. It is commonly used for registration because the form may contain personal information. The server must still process and protect the data properly.</p>
+            </article>
+
+            <article class="answer">
+                <h3>5. Does using POST automatically make information secure? Explain why or why not.</h3>
+                <p>No. POST does not automatically make information secure. HTTPS is needed to encrypt data while it travels between the browser and server, and the website must also handle and store the information securely.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Week 2 Practical Task — HTML Forms: Action &amp; Method</p>
+    </footer>
+</body>
+</html>
